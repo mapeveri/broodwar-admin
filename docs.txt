@@ -1,0 +1,2 @@
+- Abm clientes: Nombre, apellido, telefono, extras.
+- Abm reparaciones: Cliente, tipo de maquina, presupuesto (Texto), fecha de ingreso, fecha de entrega. Botón imprimir.  

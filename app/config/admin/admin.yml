@@ -1,0 +1,68 @@
+# Easy Admin
+easy_admin:
+    site_name: '<strong>Ciber</strong>'
+    design:
+        color_scheme: 'dark'
+    formats:
+        date: 'd/m/Y'
+    entities:
+        Client:
+            class: AppBundle\Entity\Client
+            label: 'Clientes'
+            list:
+                title: '%%entity_label%%'
+                actions:
+                    - { name: 'show', label: '', icon: 'search' }
+                    - { name: 'edit', label: '', icon: 'edit' }
+                    - { name: 'delete', label: '', icon: 'trash' }
+                fields:
+                    - 'id'
+                    - { property: 'name', label: 'Nombre' }
+                    - { property: 'phone', label: 'Teléfono' }
+            show:
+                title: 'Cliente'
+                fields:
+                    - 'id'
+                    - { property: 'name', label: 'Nombre', css_class: 'large' }
+                    - { property: 'phone', label: 'Teléfono', css_class: 'large' }
+                    - { property: 'extra', label: 'Extra', css_class: 'large' }
+            form:
+                title: 'Cliente'
+                fields:
+                    - { type: 'group', css_class: 'col-sm-12' }
+                    - { property: 'name', label: 'Nombre', css_class: 'large' }
+                    - { property: 'phone', label: 'Teléfono', css_class: 'large' }
+                    - { property: 'extra', label: 'Extra', css_class: 'large' }
+        Reparation:
+            class: AppBundle\Entity\Reparation
+            label: 'Reparaciones'
+            list:
+                title: '%%entity_label%%'
+                actions:
+                    - { name: 'show', label: '', icon: 'search' }
+                    - { name: 'edit', label: '', icon: 'edit' }
+                    - { name: 'delete', label: '', icon: 'trash' }
+                fields:
+                    - 'id'
+                    - { property: 'typeMachine', label: 'Tipo de máquina' }
+                    - { property: 'client', label: 'Cliente' }
+                    - { property: 'dateFrom', label: 'Fecha de ingreso' }
+                    - { property: 'dateTo', label: 'Fecha de entrega' }
+            show:
+                title: 'Reparación'
+                fields:
+                    - 'id'
+                    - { property: 'typeMachine', label: 'Tipo de máquina', css_class: 'large' }
+                    - { property: 'client', label: 'Cliente', css_class: 'large' }
+                    - { property: 'dateFrom', label: 'Fecha de ingreso', css_class: 'large' }
+                    - { property: 'dateTo', label: 'Fecha de entrega', css_class: 'large' }
+                    - { property: 'budget', label: 'Presupuesto', css_class: 'large' }
+            form:
+                title: 'Reparación'
+                fields:
+                    - { type: 'group', css_class: 'col-sm-12' }
+                    - { property: 'typeMachine', label: 'Tipo de máquina', css_class: 'large' }
+                    - { property: 'client', label: 'Cliente', css_class: 'large' }
+                    - { property: 'dateFrom', label: 'Fecha de ingreso', css_class: 'large' }
+                    - { property: 'dateTo', label: 'Fecha de entrega', css_class: 'large' }
+                    - { property: 'budget', label: 'Presupuesto', css_class: 'large' }
