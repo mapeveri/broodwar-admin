@@ -1,4 +1,5 @@
-ciber
-=====
+broodwar-admin
+==============
 
-A Symfony project created on February 12, 2017, 4:23 pm.
+Sistema para controlar las reparaciones de computadoras de los clientes del Ciber BroodWar, utilizando 
+Symfony 3 como framework y el bundle EasyAdmin.
