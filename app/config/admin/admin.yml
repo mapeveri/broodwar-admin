@@ -6,6 +6,42 @@ easy_admin:
     formats:
         date: 'd/m/Y'
     entities:
+        Reparation:
+            class: AppBundle\Entity\Reparation
+            label: 'Reparaciones'
+            list:
+                title: '%%entity_label%%'
+                actions:
+                    - { name: 'reparation_print', label: 'Imprimir', icon: 'print', type: 'route' }
+                    - { name: 'show', label: '', icon: 'search' }
+                    - { name: 'edit', label: '', icon: 'edit' }
+                    - { name: 'delete', label: '', icon: 'trash' }
+                fields:
+                    - 'id'
+                    - { property: 'typeMachine', label: 'Tipo de máquina' }
+                    - { property: 'client', label: 'Cliente' }
+                    - { property: 'dateFrom', label: 'Fecha de ingreso' }
+                    - { property: 'dateTo', label: 'Fecha de entrega' }
+            show:
+                title: 'Reparación'
+                fields:
+                    - 'id'
+                    - { property: 'typeMachine', label: 'Tipo de máquina', css_class: 'large' }
+                    - { property: 'client', label: 'Cliente', css_class: 'large' }
+                    - { property: 'dateFrom', label: 'Fecha de ingreso', css_class: 'large' }
+                    - { property: 'dateTo', label: 'Fecha de entrega', css_class: 'large' }
+                    - { property: 'budget', type: 'text', label: 'Presupuesto', css_class: 'large' }
+                    - { property: 'description', label: 'Descripción de la reparación', css_class: 'large' }
+            form:
+                title: 'Reparación'
+                fields:
+                    - { type: 'group', css_class: 'col-sm-12' }
+                    - { property: 'typeMachine', label: 'Tipo de máquina', css_class: 'large' }
+                    - { property: 'client', label: 'Cliente', css_class: 'large' }
+                    - { property: 'dateFrom', label: 'Fecha de ingreso', css_class: 'large' }
+                    - { property: 'dateTo', label: 'Fecha de entrega', css_class: 'large' }
+                    - { property: 'budget', label: 'Presupuesto', css_class: 'large' }
+                    - { property: 'description', label: 'Descripción de la reparación', css_class: 'large' }
         Client:
             class: AppBundle\Entity\Client
             label: 'Clientes'
@@ -33,39 +69,3 @@ easy_admin:
                     - { property: 'name', label: 'Nombre', css_class: 'large' }
                     - { property: 'phone', label: 'Teléfono', css_class: 'large' }
                     - { property: 'extra', label: 'Extra', css_class: 'large' }
-        Reparation:
-            class: AppBundle\Entity\Reparation
-            label: 'Reparaciones'
-            list:
-                title: '%%entity_label%%'
-                actions:
-                    - { name: 'reparation_print', label: 'Imprimir', icon: 'print', type: 'route' }
-                    - { name: 'show', label: '', icon: 'search' }
-                    - { name: 'edit', label: '', icon: 'edit' }
-                    - { name: 'delete', label: '', icon: 'trash' }
-                fields:
-                    - 'id'
-                    - { property: 'typeMachine', label: 'Tipo de máquina' }
-                    - { property: 'client', label: 'Cliente' }
-                    - { property: 'dateFrom', label: 'Fecha de ingreso' }
-                    - { property: 'dateTo', label: 'Fecha de entrega' }
-            show:
-                title: 'Reparación'
-                fields:
-                    - 'id'
-                    - { property: 'typeMachine', label: 'Tipo de máquina', css_class: 'large' }
-                    - { property: 'client', label: 'Cliente', css_class: 'large' }
-                    - { property: 'dateFrom', label: 'Fecha de ingreso', css_class: 'large' }
-                    - { property: 'dateTo', label: 'Fecha de entrega', css_class: 'large' }
-                    - { property: 'budget', label: 'Presupuesto', css_class: 'large' }
-                    - { property: 'description', label: 'Descripción de la reparación', css_class: 'large' }
-            form:
-                title: 'Reparación'
-                fields:
-                    - { type: 'group', css_class: 'col-sm-12' }
-                    - { property: 'typeMachine', label: 'Tipo de máquina', css_class: 'large' }
-                    - { property: 'client', label: 'Cliente', css_class: 'large' }
-                    - { property: 'dateFrom', label: 'Fecha de ingreso', css_class: 'large' }
-                    - { property: 'dateTo', label: 'Fecha de entrega', css_class: 'large' }
-                    - { property: 'budget', label: 'Presupuesto', css_class: 'large' }
-                    - { property: 'description', label: 'Descripción de la reparación', css_class: 'large' }

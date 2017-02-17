@@ -30,14 +30,12 @@ class Reparation
     private $typeMachine;
 
     /**
-     * @ORM\Column(type="datetime")
-     * @Assert\DateTime()
+     * @ORM\Column(type="date")
      */
     private $dateFrom;
 
     /**
-     * @ORM\Column(type="datetime")
-     * @Assert\DateTime()
+     * @ORM\Column(type="date", nullable=true)
      */
     private $dateTo;
 
