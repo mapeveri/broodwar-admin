@@ -25,7 +25,7 @@ class Reparation
     private $client;
 
     /**
-     * @ORM\Column(type="string", length=300)
+     * @ORM\Column(type="text")
      */
     private $typeMachine;
 
@@ -45,6 +45,11 @@ class Reparation
      * @ORM\Column(type="text")
      */
     private $budget;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $description;
     
     /**
      * Get id
@@ -174,5 +179,29 @@ class Reparation
     public function getClient()
     {
         return $this->client;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Reparation
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
     }
 }

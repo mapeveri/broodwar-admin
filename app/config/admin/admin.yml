@@ -39,6 +39,7 @@ easy_admin:
             list:
                 title: '%%entity_label%%'
                 actions:
+                    - { name: 'reparation_print', label: 'Imprimir', icon: 'print', type: 'route' }
                     - { name: 'show', label: '', icon: 'search' }
                     - { name: 'edit', label: '', icon: 'edit' }
                     - { name: 'delete', label: '', icon: 'trash' }
@@ -57,6 +58,7 @@ easy_admin:
                     - { property: 'dateFrom', label: 'Fecha de ingreso', css_class: 'large' }
                     - { property: 'dateTo', label: 'Fecha de entrega', css_class: 'large' }
                     - { property: 'budget', label: 'Presupuesto', css_class: 'large' }
+                    - { property: 'description', label: 'Descripción de la reparación', css_class: 'large' }
             form:
                 title: 'Reparación'
                 fields:
@@ -66,3 +68,4 @@ easy_admin:
                     - { property: 'dateFrom', label: 'Fecha de ingreso', css_class: 'large' }
                     - { property: 'dateTo', label: 'Fecha de entrega', css_class: 'large' }
                     - { property: 'budget', label: 'Presupuesto', css_class: 'large' }
+                    - { property: 'description', label: 'Descripción de la reparación', css_class: 'large' }
