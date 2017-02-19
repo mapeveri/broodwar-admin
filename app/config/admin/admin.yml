@@ -16,6 +16,7 @@ easy_admin:
                     - { name: 'show', label: '', icon: 'search' }
                     - { name: 'edit', label: '', icon: 'edit' }
                     - { name: 'delete', label: '', icon: 'trash' }
+                    - { name: 'new', label: 'Nueva reparación', icon: 'plus-circle' }
                 fields:
                     - 'id'
                     - { property: 'typeMachine', label: 'Tipo de máquina' }
@@ -51,6 +52,7 @@ easy_admin:
                     - { name: 'show', label: '', icon: 'search' }
                     - { name: 'edit', label: '', icon: 'edit' }
                     - { name: 'delete', label: '', icon: 'trash' }
+                    - { name: 'new', label: 'Agregar cliente', icon: 'plus-circle' }
                 fields:
                     - 'id'
                     - { property: 'name', label: 'Nombre' }
