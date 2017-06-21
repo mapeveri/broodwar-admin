@@ -23,7 +23,7 @@ class ReparationController extends Controller
             'record' => $record,
         ));
 
-        $mpdf = new \mPDF();
+        $mpdf = new \mPDF('utf-8', 'A4-L');
         $mpdf->WriteHTML($html);
         return new Response($mpdf->Output('reparation.pdf', 'I'));
     }
